@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panchayat Weather AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="home-page">
+
+    <!-- Animated Background -->
+
+    <div class="weather-background">
+
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+        <div class="cloud cloud-three"></div>
+
+        <div class="rain">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">🌦️</div>
+
+            <div>
+                <h2>Panchayat</h2>
+                <span>Weather AI</span>
+            </div>
+        </div>
+
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#features">Features</a>
+
+            <a href="#impact">Impact</a>
+
+            <button
+                class="nav-button"
+                onclick="goTo('select.html')">
+                Launch Prototype →
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- HERO SECTION -->
+
+    <main id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                🤖 AI-POWERED PANCHAYAT WEATHER INTELLIGENCE
+            </div>
+
+
+            <h1>
+                Weather Intelligence
+                <span>For Every Panchayat.</span>
+            </h1>
+
+
+            <p class="hero-description">
+
+                Transforming weather data into
+                <strong>early warnings, AI predictions
+                and actionable decisions</strong>
+                for farmers and Panchayats.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button
+                    class="primary-button"
+                    onclick="goTo('select.html')">
+
+                    🚀 Explore Live Prototype
+
+                </button>
+
+
+                <button
+                    class="secondary-button"
+                    onclick="scrollToFeatures()">
+
+                    Discover Features ↓
+
+                </button>
+
+            </div>
+
+
+            <!-- QUICK STATS -->
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>92%</strong>
+                    <span>AI Confidence</span>
+                </div>
+
+                <div>
+                    <strong>24/7</strong>
+                    <span>Monitoring</span>
+                </div>
+
+                <div>
+                    <strong>LOCAL</strong>
+                    <span>Panchayat Level</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- WEATHER VISUAL -->
+
+        <div class="hero-visual">
+
+            <div class="weather-orbit">
+
+                <div class="orbit-ring"></div>
+
+                <div class="weather-sun">
+                    ☀️
+                </div>
+
+            </div>
+
+
+            <div class="hero-weather-card glass-card">
+
+                <div class="weather-card-top">
+
+                    <div>
+                        <span class="small-label">
+                            CURRENT WEATHER
+                        </span>
+
+                        <h3>Chegunta</h3>
+                    </div>
+
+                    <span class="live-dot">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="temperature">
+
+                    31°
+
+                    <span>C</span>
+
+                </div>
+
+
+                <div class="weather-condition">
+
+                    ⛅ Partly Cloudy
+
+                </div>
+
+
+                <div class="weather-mini-stats">
+
+                    <div>
+                        💧
+                        <strong>68%</strong>
+                        <small>Humidity</small>
+                    </div>
+
+                    <div>
+                        🌧️
+                        <strong>12mm</strong>
+                        <small>Rainfall</small>
+                    </div>
+
+                    <div>
+                        💨
+                        <strong>14km/h</strong>
+                        <small>Wind</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FLOATING ALERT -->
+
+            <div class="floating-card alert-float">
+
+                <div class="floating-icon danger">
+                    🚨
+                </div>
+
+                <div>
+                    <strong>Heavy Rain Alert</strong>
+                    <span>Expected in 6 hours</span>
+                </div>
+
+            </div>
+
+
+            <!-- FLOATING AI -->
+
+            <div class="floating-card ai-float">
+
+                <div class="floating-icon ai">
+                    🤖
+                </div>
+
+                <div>
+                    <strong>AI Risk: 78%</strong>
+                    <span>High rainfall risk</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FEATURES -->
+
+    <section id="features" class="features-section">
+
+        <div class="section-heading">
+
+            <span>POWERFUL FEATURES</span>
+
+            <h2>
+                One Platform.
+                <span>Complete Weather Intelligence.</span>
+            </h2>
+
+            <p>
+                Every feature is designed to help Panchayats
+                and farmers understand weather risks and
+                take action before it is too late.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+            <div class="feature-card feature-weather">
+
+                <div class="feature-number">01</div>
+
+                <div class="feature-icon">
+                    🌦️
+                </div>
+
+                <h3>Live Weather</h3>
+
+                <p>
+                    Monitor temperature, rainfall,
+                    humidity and wind conditions
+                    at Panchayat level.
+                </p>
+
+                <button onclick="goTo('weather.html')">
+                    Explore →
+                </button>
+
+            </div>
+
+
+
+            <div class="feature-card feature-ai">
+
+                <div class="feature-number">02</div>
+
+                <div class="feature-icon">
+                    🤖
+                </div>
+
+                <h3>AI Risk Prediction</h3>
+
+                <p>
+                    AI analyzes weather patterns
+                    and predicts rainfall, flood
+                    and crop damage risks.
+                </p>
+
+                <button onclick="goTo('ai-prediction.html')">
+                    Explore →
+                </button>
+
+            </div>
+
+
+
+            <div class="feature-card feature-alert">
+
+                <div class="feature-number">03</div>
+
+                <div class="feature-icon">
+                    🚨
+                </div>
+
+                <h3>Smart Alerts</h3>
+
+                <p>
+                    Receive early warnings before
+                    dangerous weather events
+                    affect the Panchayat.
+                </p>
+
+                <button onclick="goTo('alerts.html')">
+                    Explore →
+                </button>
+
+            </div>
+
+
+
+            <div class="feature-card feature-forecast">
+
+                <div class="feature-number">04</div>
+
+                <div class="feature-icon">
+                    📅
+                </div>
+
+                <h3>7-Day Forecast</h3>
+
+                <p>
+                    View upcoming weather conditions
+                    and identify high-risk days
+                    in advance.
+                </p>
+
+                <button onclick="goTo('forecast.html')">
+                    Explore →
+                </button>
+
+            </div>
+
+
+
+            <div class="feature-card feature-farmer">
+
+                <div class="feature-number">05</div>
+
+                <div class="feature-icon">
+                    🌾
+                </div>
+
+                <h3>Farmer Recommendations</h3>
+
+                <p>
+                    Convert weather predictions
+                    into simple actions farmers
+                    can immediately follow.
+                </p>
+
+                <button onclick="goTo('recommendations.html')">
+                    Explore →
+                </button>
+
+            </div>
+
+
+
+            <div class="feature-card feature-gps">
+
+                <div class="feature-number">06</div>
+
+                <div class="feature-icon">
+                    📍
+                </div>
+
+                <h3>GPS Tracking</h3>
+
+                <p>
+                    Identify Panchayat location,
+                    monitor affected areas and
+                    track risk zones.
+                </p>
+
+                <button onclick="goTo('panchayat.html')">
+                    Explore →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- IMPACT -->
+
+    <section id="impact" class="impact-section">
+
+        <div class="impact-content">
+
+            <span class="section-label">
+                OUR VISION
+            </span>
+
+            <h2>
+                From Weather Data
+                <br>
+                <span>To Real-World Action.</span>
+            </h2>
+
+            <p>
+                Panchayat Weather AI connects weather
+                intelligence, artificial intelligence,
+                farmers and local administration into
+                one simple platform.
+            </p>
+
+        </div>
+
+
+        <div class="impact-flow">
+
+            <div class="flow-item">
+                <div>🌦️</div>
+                <span>Weather Data</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <div>🤖</div>
+                <span>AI Analysis</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <div>⚠️</div>
+                <span>Risk Prediction</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <div>🚨</div>
+                <span>Early Alert</span>
+            </div>
+
+            <div class="flow-arrow">→</div>
+
+            <div class="flow-item">
+                <div>🌾</div>
+                <span>Farmer Action</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            🌦️ <strong>Panchayat Weather AI</strong>
+        </div>
+
+        <p>
+            SIH26074 • Smart Weather Intelligence
+            for Rural Communities
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
