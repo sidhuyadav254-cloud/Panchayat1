@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Weather | Panchayat Weather AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="app-page weather-feature-page">
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+        <div class="logo-icon">🌦️</div>
+
+        <div>
+            <h2>Panchayat</h2>
+            <span>Weather AI</span>
+        </div>
+    </div>
+
+    <div class="location-mini">
+        <span>📍</span>
+
+        <div>
+            <small>ACTIVE LOCATION</small>
+            <strong>Chegunta</strong>
+        </div>
+
+        <span class="online-dot"></span>
+    </div>
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">OVERVIEW</p>
+
+        <a href="dashboard.html" class="nav-link">
+            <span>📊</span> Dashboard
+        </a>
+
+        <p class="nav-title">INTELLIGENCE</p>
+
+        <a href="weather.html" class="nav-link active">
+            <span>🌦️</span> Live Weather
+        </a>
+
+        <a href="ai-prediction.html" class="nav-link">
+            <span>🤖</span> AI Prediction
+        </a>
+
+        <a href="alerts.html" class="nav-link">
+            <span>🚨</span> Smart Alerts
+            <span class="notification-count">3</span>
+        </a>
+
+        <a href="forecast.html" class="nav-link">
+            <span>📅</span> 7-Day Forecast
+        </a>
+
+        <p class="nav-title">ACTION</p>
+
+        <a href="recommendations.html" class="nav-link">
+            <span>🌾</span> Farmer Actions
+        </a>
+
+        <a href="panchayat.html" class="nav-link">
+            <span>📍</span> Panchayat Center
+        </a>
+
+        <p class="nav-title">ANALYTICS</p>
+
+        <a href="reports.html" class="nav-link">
+            <span>📈</span> Reports
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <div class="system-status">
+            <span class="status-pulse"></span>
+
+            <div>
+                <strong>System Online</strong>
+                <small>Weather monitoring active</small>
+            </div>
+        </div>
+
+    </div>
+
+</aside>
+
+
+<header class="mobile-header">
+
+    <div class="mobile-logo">
+        🌦️
+        <strong>Panchayat Weather AI</strong>
+    </div>
+
+    <button class="menu-button" onclick="toggleMobileMenu()">
+        ☰
+    </button>
+
+</header>
+
+
+<main class="dashboard-main">
+
+    <section class="feature-page-header">
+
+        <div>
+
+            <span class="page-label">
+                LIVE WEATHER INTELLIGENCE
+            </span>
+
+            <h1>
+                Weather Around
+                <span>Chegunta</span>
+            </h1>
+
+            <p>
+                Real-time weather conditions for your Panchayat.
+            </p>
+
+        </div>
+
+        <div class="live-badge">
+            ● LIVE DATA
+        </div>
+
+    </section>
+
+
+    <!-- WEATHER HERO -->
+
+    <section class="weather-feature-hero">
+
+        <div class="weather-scene">
+
+            <div class="sun-large">
+                ☀️
+            </div>
+
+            <div class="weather-cloud cloud-a">
+                ☁️
+            </div>
+
+            <div class="weather-cloud cloud-b">
+                ☁️
+            </div>
+
+            <div class="weather-particles">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="scene-text">
+
+                <span>CHEGUNTA PANCHAYAT</span>
+
+                <strong>
+                    31°C
+                </strong>
+
+                <p>
+                    ⛅ Partly Cloudy
+                </p>
+
+                <small>
+                    Feels like 33°C
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="weather-data-panel">
+
+            <div class="data-item">
+
+                <span>💧</span>
+
+                <div>
+                    <small>Humidity</small>
+                    <strong id="humidity">68%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <span>🌧️</span>
+
+                <div>
+                    <small>Rainfall</small>
+                    <strong id="rainfall">12 mm</strong>
+                </div>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <span>💨</span>
+
+                <div>
+                    <small>Wind Speed</small>
+                    <strong id="wind">14 km/h</strong>
+                </div>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <span>👁️</span>
+
+                <div>
+                    <small>Visibility</small>
+                    <strong>8 km</strong>
+                </div>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <span>🌡️</span>
+
+                <div>
+                    <small>Pressure</small>
+                    <strong>1008 hPa</strong>
+                </div>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <span>☀️</span>
+
+                <div>
+                    <small>UV Index</small>
+                    <strong>5 Moderate</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WEATHER INSIGHTS -->
+
+    <section class="dashboard-two-column">
+
+        <div class="dashboard-panel">
+
+            <div class="panel-heading">
+
+                <div>
+                    <span class="card-label">
+                        WEATHER INSIGHT
+                    </span>
+
+                    <h2>
+                        What is happening?
+                    </h2>
+                </div>
+
+                <span class="ai-status">
+                    AI MONITORED
+                </span>
+
+            </div>
+
+
+            <div class="insight-box">
+
+                <div class="insight-icon">
+                    🌧️
+                </div>
+
+                <div>
+
+                    <strong>
+                        Rainfall activity increasing
+                    </strong>
+
+                    <p>
+                        Weather conditions indicate
+                        increasing cloud cover and
+                        rainfall probability during
+                        the next few hours.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="insight-box">
+
+                <div class="insight-icon">
+                    🌾
+                </div>
+
+                <div>
+
+                    <strong>
+                        Agriculture attention required
+                    </strong>
+
+                    <p>
+                        Farmers should protect harvested
+                        crops before the predicted rainfall.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-panel">
+
+            <div class="panel-heading">
+
+                <div>
+                    <span class="card-label">
+                        WEATHER METRICS
+                    </span>
+
+                    <h2>
+                        Today's Conditions
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="metric-list">
+
+                <div>
+                    <span>Cloud Cover</span>
+                    <strong>64%</strong>
+                </div>
+
+                <div>
+                    <span>Rain Probability</span>
+                    <strong>60%</strong>
+                </div>
+
+                <div>
+                    <span>Visibility</span>
+                    <strong>8 km</strong>
+                </div>
+
+                <div>
+                    <span>Air Pressure</span>
+                    <strong>1008 hPa</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="page-navigation">
+
+        <button
+            class="secondary-button"
+            onclick="goTo('dashboard.html')">
+
+            ← Dashboard
+
+        </button>
+
+        <button
+            class="primary-button"
+            onclick="goTo('ai-prediction.html')">
+
+            Continue to AI Prediction →
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
