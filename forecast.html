@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>7-Day Forecast | Panchayat Weather AI</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="app-page forecast-feature-page">
+
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <div class="logo-icon">
+            🌦️
+        </div>
+
+        <div>
+            <h2>Panchayat</h2>
+            <span>Weather AI</span>
+        </div>
+
+    </div>
+
+
+    <div class="location-mini">
+
+        <span>📍</span>
+
+        <div>
+            <small>ACTIVE LOCATION</small>
+            <strong>Chegunta</strong>
+        </div>
+
+        <span class="online-dot"></span>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">OVERVIEW</p>
+
+        <a href="dashboard.html" class="nav-link">
+            <span>📊</span> Dashboard
+        </a>
+
+        <p class="nav-title">INTELLIGENCE</p>
+
+        <a href="weather.html" class="nav-link">
+            <span>🌦️</span> Live Weather
+        </a>
+
+        <a href="ai-prediction.html" class="nav-link">
+            <span>🤖</span> AI Prediction
+        </a>
+
+        <a href="alerts.html" class="nav-link">
+            <span>🚨</span> Smart Alerts
+            <span class="notification-count">3</span>
+        </a>
+
+        <a href="forecast.html" class="nav-link active">
+            <span>📅</span> 7-Day Forecast
+        </a>
+
+        <p class="nav-title">ACTION</p>
+
+        <a href="recommendations.html" class="nav-link">
+            <span>🌾</span> Farmer Actions
+        </a>
+
+        <a href="panchayat.html" class="nav-link">
+            <span>📍</span> Panchayat Center
+        </a>
+
+        <p class="nav-title">ANALYTICS</p>
+
+        <a href="reports.html" class="nav-link">
+            <span>📈</span> Reports
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<header class="mobile-header">
+
+    <div class="mobile-logo">
+        📅
+        <strong>7-Day Forecast</strong>
+    </div>
+
+    <button
+        class="menu-button"
+        onclick="toggleMobileMenu()">
+
+        ☰
+
+    </button>
+
+</header>
+
+
+
+<main class="dashboard-main">
+
+
+    <section class="feature-page-header">
+
+        <div>
+
+            <span class="page-label">
+                WEATHER OUTLOOK
+            </span>
+
+            <h1>
+                Next 7 Days
+                <span>Forecast</span>
+            </h1>
+
+            <p>
+                Plan agricultural and Panchayat activities
+                using upcoming weather conditions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FORECAST HERO -->
+
+    <section class="forecast-summary">
+
+
+        <div class="summary-item">
+
+            <span>🌧️</span>
+
+            <div>
+                <small>EXPECTED RAIN</small>
+                <strong>68 mm</strong>
+            </div>
+
+        </div>
+
+
+        <div class="summary-item">
+
+            <span>🌡️</span>
+
+            <div>
+                <small>MAX TEMPERATURE</small>
+                <strong>33°C</strong>
+            </div>
+
+        </div>
+
+
+        <div class="summary-item">
+
+            <span>⚠️</span>
+
+            <div>
+                <small>HIGH RISK DAYS</small>
+                <strong>3 Days</strong>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- 7 DAY TIMELINE -->
+
+    <section class="forecast-timeline">
+
+
+        <div class="forecast-card today">
+
+            <span>TODAY</span>
+
+            <div class="big-weather-icon">
+                ⛅
+            </div>
+
+            <strong>
+                31°C
+            </strong>
+
+            <small>
+                Partly Cloudy
+            </small>
+
+            <div class="rain-probability">
+                🌧️ 60%
+            </div>
+
+        </div>
+
+
+
+        <div class="forecast-card">
+
+            <span>TUE</span>
+
+            <div class="big-weather-icon">
+                🌧️
+            </div>
+
+            <strong>
+                30°C
+            </strong>
+
+            <small>
+                Rain
+            </small>
+
+            <div class="rain-probability">
+                🌧️ 78%
+            </div>
+
+        </div>
+
+
+
+        <div class="forecast-card high-risk-day">
+
+            <div class="risk-tag">
+                HIGH RISK
+            </div>
+
+            <span>WED</span>
+
+            <div class="big-weather-icon">
+                🌧️
+            </div>
+
+            <strong>
+                29°C
+            </strong>
+
+            <small>
+                Heavy Rain
+            </small>
+
+            <div class="rain-probability">
+                🌧️ 85%
+            </div>
+
+        </div>
+
+
+
+        <div class="forecast-card">
+
+            <span>THU</span>
+
+            <div class="big-weather-icon">
+                ☁️
+            </div>
+
+            <strong>
+                30°C
+            </strong>
+
+            <small>
+                Cloudy
+            </small>
+
+            <div class="rain-probability">
+                🌧️ 65%
+            </div>
+
+        </div>
+
+
+
+        <div class="forecast-card">
+
+            <span>FRI</span>
+
+            <div class="big-weather-icon">
+                ⛅
+            </div>
+
+            <strong>
+                32°C
+            </strong>
+
+            <small>
+                Partly Cloudy
+            </small>
+
+            <div class="rain-probability">
+                🌧️ 40%
+            </div>
+
+        </div>
+
+
+
+        <div class="forecast-card">
+
+            <span>SAT</span>
+
+            <div class="big-weather-icon">
+                ☀️
+            </div>
+
+            <strong>
+                33°C
+            </strong>
+
+            <small>
+                Sunny
+            </small>
+
+            <div class="rain-probability">
+                🌧️ 20%
+            </div>
+
+        </div>
+
+
+
+        <div class="forecast-card">
+
+            <span>SUN</span>
+
+            <div class="big-weather-icon">
+                ☁️
+            </div>
+
+            <strong>
+                31°C
+            </strong>
+
+            <small>
+                Cloudy
+            </small>
+
+            <div class="rain-probability">
+                🌧️ 45%
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- WEEKLY INSIGHT -->
+
+    <section class="dashboard-panel forecast-insight">
+
+        <div class="forecast-insight-icon">
+            🤖
+        </div>
+
+        <div>
+
+            <span class="card-label">
+                AI WEEKLY INSIGHT
+            </span>
+
+            <h2>
+                Mid-week rainfall requires attention
+            </h2>
+
+            <p>
+                Wednesday has the highest rainfall
+                probability. Farmers should complete
+                urgent harvesting and crop protection
+                activities before the high-risk period.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="page-navigation">
+
+        <button
+            class="secondary-button"
+            onclick="goTo('alerts.html')">
+
+            ← Alerts
+
+        </button>
+
+        <button
+            class="primary-button"
+            onclick="goTo('recommendations.html')">
+
+            Farmer Recommendations →
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
