@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Panchayat Action Center | Weather AI</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="app-page panchayat-page">
+
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <div class="logo-icon">
+            🌦️
+        </div>
+
+        <div>
+            <h2>Panchayat</h2>
+            <span>Weather AI</span>
+        </div>
+
+    </div>
+
+
+    <div class="location-mini">
+
+        <span>📍</span>
+
+        <div>
+            <small>ACTIVE LOCATION</small>
+            <strong>Chegunta</strong>
+        </div>
+
+        <span class="online-dot"></span>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">OVERVIEW</p>
+
+        <a href="dashboard.html" class="nav-link">
+            <span>📊</span>
+            Dashboard
+        </a>
+
+
+        <p class="nav-title">INTELLIGENCE</p>
+
+        <a href="weather.html" class="nav-link">
+            <span>🌦️</span>
+            Live Weather
+        </a>
+
+        <a href="ai-prediction.html" class="nav-link">
+            <span>🤖</span>
+            AI Prediction
+        </a>
+
+        <a href="alerts.html" class="nav-link">
+            <span>🚨</span>
+            Smart Alerts
+            <span class="notification-count">3</span>
+        </a>
+
+        <a href="forecast.html" class="nav-link">
+            <span>📅</span>
+            7-Day Forecast
+        </a>
+
+
+        <p class="nav-title">ACTION</p>
+
+        <a href="recommendations.html" class="nav-link">
+            <span>🌾</span>
+            Farmer Actions
+        </a>
+
+        <a href="panchayat.html"
+           class="nav-link active">
+
+            <span>📍</span>
+            Panchayat Center
+
+        </a>
+
+
+        <p class="nav-title">ANALYTICS</p>
+
+        <a href="reports.html" class="nav-link">
+
+            <span>📈</span>
+            Reports
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="system-status">
+
+            <span class="status-pulse"></span>
+
+            <div>
+                <strong>GPS Monitoring Active</strong>
+                <small>Location services ready</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<header class="mobile-header">
+
+    <div class="mobile-logo">
+
+        📍
+
+        <strong>
+            Panchayat Action Center
+        </strong>
+
+    </div>
+
+
+    <button
+        class="menu-button"
+        onclick="toggleMobileMenu()">
+
+        ☰
+
+    </button>
+
+</header>
+
+
+
+<main class="dashboard-main">
+
+
+    <section class="feature-page-header">
+
+        <div>
+
+            <span class="page-label">
+                PANCHAYAT RESPONSE CENTER
+            </span>
+
+            <h1>
+                Monitor &
+                <span>Respond</span>
+            </h1>
+
+            <p>
+                Track Panchayat location, risk zones
+                and coordinate emergency actions.
+            </p>
+
+        </div>
+
+
+        <div class="gps-status">
+
+            <span class="gps-pulse"></span>
+
+            GPS READY
+
+        </div>
+
+    </section>
+
+
+
+    <!-- GPS SECTION -->
+
+    <section class="gps-layout">
+
+
+        <!-- MAP -->
+
+        <div class="gps-map">
+
+            <div class="map-grid"></div>
+
+
+            <!-- roads -->
+
+            <div class="map-road road-one"></div>
+
+            <div class="map-road road-two"></div>
+
+            <div class="map-road road-three"></div>
+
+
+            <!-- SAFE AREA -->
+
+            <div class="map-zone safe-zone">
+
+                <span>SAFE</span>
+
+            </div>
+
+
+            <!-- MEDIUM AREA -->
+
+            <div class="map-zone medium-zone">
+
+                <span>MEDIUM</span>
+
+            </div>
+
+
+            <!-- HIGH AREA -->
+
+            <div class="map-zone high-zone">
+
+                <span>HIGH RISK</span>
+
+            </div>
+
+
+            <!-- PANCHAYAT -->
+
+            <div class="map-marker panchayat-marker">
+
+                <div class="marker-pulse"></div>
+
+                📍
+
+                <small>
+                    Panchayat
+                </small>
+
+            </div>
+
+
+            <!-- FARM -->
+
+            <div class="map-marker farm-marker">
+
+                🌾
+
+                <small>
+                    Farm Area
+                </small>
+
+            </div>
+
+
+            <!-- WATER -->
+
+            <div class="map-marker water-marker">
+
+                💧
+
+                <small>
+                    Water Zone
+                </small>
+
+            </div>
+
+
+            <div class="map-label">
+                CHEGUNTA PANCHAYAT
+            </div>
+
+        </div>
+
+
+
+        <!-- GPS INFORMATION -->
+
+        <div class="gps-panel">
+
+            <span class="card-label">
+                GPS TRACKING
+            </span>
+
+
+            <h2>
+                Location Intelligence
+            </h2>
+
+
+            <p>
+                Use GPS to identify the current
+                location and support localized
+                Panchayat response.
+            </p>
+
+
+            <div class="gps-status-box">
+
+                <div class="gps-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <small>
+                        GPS STATUS
+                    </small>
+
+                    <strong id="gpsStatus">
+                        Not Detected
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="coordinates">
+
+                <div>
+
+                    <span>
+                        Latitude
+                    </span>
+
+                    <strong id="latitude">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Longitude
+                    </span>
+
+                    <strong id="longitude">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary-button gps-button"
+                onclick="detectLocation()">
+
+                📍 Detect My Location
+
+            </button>
+
+
+            <small class="gps-note">
+                Your browser will ask for
+                location permission.
+            </small>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PANCHAYAT STATISTICS -->
+
+    <section class="stats-grid">
+
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon red">
+                🚨
+            </div>
+
+            <div>
+
+                <span>
+                    Active Alerts
+                </span>
+
+                <strong>
+                    03
+                </strong>
+
+                <small>
+                    1 high priority
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon orange">
+                📍
+            </div>
+
+            <div>
+
+                <span>
+                    Affected Areas
+                </span>
+
+                <strong>
+                    02
+                </strong>
+
+                <small>
+                    Need monitoring
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon green">
+                👨‍🌾
+            </div>
+
+            <div>
+
+                <span>
+                    Farmers
+                </span>
+
+                <strong>
+                    248
+                </strong>
+
+                <small>
+                    To be notified
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon blue">
+                🚑
+            </div>
+
+            <div>
+
+                <span>
+                    Response Team
+                </span>
+
+                <strong>
+                    06
+                </strong>
+
+                <small>
+                    Available
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ACTION CENTER -->
+
+    <section class="dashboard-panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <span class="card-label">
+                    EMERGENCY RESPONSE
+                </span>
+
+                <h2>
+                    Panchayat Actions
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="response-grid">
+
+
+            <button
+                class="response-action"
+                onclick="notifyFarmers()">
+
+                <span>
+                    📢
+                </span>
+
+                <div>
+
+                    <strong>
+                        Notify Farmers
+                    </strong>
+
+                    <small>
+                        Send rainfall warning
+                    </small>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+
+
+            <button
+                class="response-action"
+                onclick="drainageCheck()">
+
+                <span>
+                    💧
+                </span>
+
+                <div>
+
+                    <strong>
+                        Inspect Drainage
+                    </strong>
+
+                    <small>
+                        Check flood-prone areas
+                    </small>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+
+
+            <button
+                class="response-action"
+                onclick="showNotification(
+                    'Emergency response team notified'
+                )">
+
+                <span>
+                    🚑
+                </span>
+
+                <div>
+
+                    <strong>
+                        Alert Response Team
+                    </strong>
+
+                    <small>
+                        Start local preparedness
+                    </small>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+
+
+            <button
+                class="response-action"
+                onclick="generateReport()">
+
+                <span>
+                    📊
+                </span>
+
+                <div>
+
+                    <strong>
+                        Generate Report
+                    </strong>
+
+                    <small>
+                        Record Panchayat response
+                    </small>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CHECKLIST -->
+
+    <section class="dashboard-panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <span class="card-label">
+                    RESPONSE CHECKLIST
+                </span>
+
+                <h2>
+                    Preparedness Status
+                </h2>
+
+            </div>
+
+            <span class="status-green">
+                3 / 5 COMPLETED
+            </span>
+
+        </div>
+
+
+        <div class="checklist">
+
+
+            <label class="check-item">
+
+                <input type="checkbox" checked>
+
+                <span class="custom-check">
+                    ✓
+                </span>
+
+                <div>
+                    <strong>
+                        Weather alert reviewed
+                    </strong>
+
+                    <small>
+                        Completed
+                    </small>
+                </div>
+
+            </label>
+
+
+
+            <label class="check-item">
+
+                <input type="checkbox" checked>
+
+                <span class="custom-check">
+                    ✓
+                </span>
+
+                <div>
+                    <strong>
+                        Risk areas identified
+                    </strong>
+
+                    <small>
+                        Completed
+                    </small>
+                </div>
+
+            </label>
+
+
+
+            <label class="check-item">
+
+                <input type="checkbox" checked>
+
+                <span class="custom-check">
+                    ✓
+                </span>
+
+                <div>
+                    <strong>
+                        Response team informed
+                    </strong>
+
+                    <small>
+                        Completed
+                    </small>
+                </div>
+
+            </label>
+
+
+
+            <label class="check-item">
+
+                <input type="checkbox">
+
+                <span class="custom-check">
+                    4
+                </span>
+
+                <div>
+                    <strong>
+                        Farmers notified
+                    </strong>
+
+                    <small>
+                        Action required
+                    </small>
+                </div>
+
+            </label>
+
+
+
+            <label class="check-item">
+
+                <input type="checkbox">
+
+                <span class="custom-check">
+                    5
+                </span>
+
+                <div>
+                    <strong>
+                        Drainage inspection completed
+                    </strong>
+
+                    <small>
+                        Action required
+                    </small>
+                </div>
+
+            </label>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="page-navigation">
+
+        <button
+            class="secondary-button"
+            onclick="goTo('recommendations.html')">
+
+            ← Farmer Actions
+
+        </button>
+
+
+        <button
+            class="primary-button"
+            onclick="goTo('reports.html')">
+
+            View Reports →
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+
+<!-- GPS SCRIPT -->
+
+<script>
+
+function detectLocation() {
+
+    const status =
+        document.getElementById("gpsStatus");
+
+    const latitude =
+        document.getElementById("latitude");
+
+    const longitude =
+        document.getElementById("longitude");
+
+
+    if (!navigator.geolocation) {
+
+        status.innerText =
+            "GPS Not Supported";
+
+        return;
+
+    }
+
+
+    status.innerText =
+        "Detecting...";
+
+
+    navigator.geolocation.getCurrentPosition(
+
+        function(position) {
+
+            const lat =
+                position.coords.latitude;
+
+            const lon =
+                position.coords.longitude;
+
+
+            latitude.innerText =
+                lat.toFixed(6);
+
+            longitude.innerText =
+                lon.toFixed(6);
+
+
+            status.innerText =
+                "Location Detected ✓";
+
+
+            status.style.color =
+                "#22c55e";
+
+
+            if (typeof showNotification === "function") {
+
+                showNotification(
+                    "GPS location detected successfully"
+                );
+
+            }
+
+        },
+
+
+        function(error) {
+
+            status.innerText =
+                "Permission Denied";
+
+            status.style.color =
+                "#ef4444";
+
+
+            alert(
+                "Unable to access your location.\n\n" +
+                "Please allow location permission in your browser."
+            );
+
+        },
+
+        {
+            enableHighAccuracy: true,
+
+            timeout: 10000,
+
+            maximumAge: 0
+
+        }
+
+    );
+
+}
+
+</script>
+
+</body>
+
+</html>
