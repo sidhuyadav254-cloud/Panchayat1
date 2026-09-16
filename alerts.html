@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Alerts | Panchayat Weather AI</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="app-page alerts-feature-page">
+
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <div class="logo-icon">
+            🌦️
+        </div>
+
+        <div>
+            <h2>Panchayat</h2>
+            <span>Weather AI</span>
+        </div>
+
+    </div>
+
+
+    <div class="location-mini">
+
+        <span>📍</span>
+
+        <div>
+            <small>ACTIVE LOCATION</small>
+            <strong>Chegunta</strong>
+        </div>
+
+        <span class="online-dot"></span>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">OVERVIEW</p>
+
+        <a href="dashboard.html" class="nav-link">
+            <span>📊</span> Dashboard
+        </a>
+
+        <p class="nav-title">INTELLIGENCE</p>
+
+        <a href="weather.html" class="nav-link">
+            <span>🌦️</span> Live Weather
+        </a>
+
+        <a href="ai-prediction.html" class="nav-link">
+            <span>🤖</span> AI Prediction
+        </a>
+
+        <a href="alerts.html" class="nav-link active">
+            <span>🚨</span> Smart Alerts
+            <span class="notification-count">3</span>
+        </a>
+
+        <a href="forecast.html" class="nav-link">
+            <span>📅</span> 7-Day Forecast
+        </a>
+
+        <p class="nav-title">ACTION</p>
+
+        <a href="recommendations.html" class="nav-link">
+            <span>🌾</span> Farmer Actions
+        </a>
+
+        <a href="panchayat.html" class="nav-link">
+            <span>📍</span> Panchayat Center
+        </a>
+
+        <p class="nav-title">ANALYTICS</p>
+
+        <a href="reports.html" class="nav-link">
+            <span>📈</span> Reports
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="system-status">
+
+            <span class="status-pulse"></span>
+
+            <div>
+                <strong>Alert System Online</strong>
+                <small>Monitoring 24/7</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<header class="mobile-header">
+
+    <div class="mobile-logo">
+
+        🚨
+
+        <strong>
+            Smart Weather Alerts
+        </strong>
+
+    </div>
+
+    <button
+        class="menu-button"
+        onclick="toggleMobileMenu()">
+
+        ☰
+
+    </button>
+
+</header>
+
+
+
+<main class="dashboard-main">
+
+
+    <section class="feature-page-header">
+
+        <div>
+
+            <span class="page-label">
+                EARLY WARNING SYSTEM
+            </span>
+
+            <h1>
+                Smart
+                <span>Alerts</span>
+            </h1>
+
+            <p>
+                Early warnings generated from AI weather analysis.
+            </p>
+
+        </div>
+
+
+        <div class="alert-live-status">
+
+            <span></span>
+
+            3 ACTIVE ALERTS
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MAIN EMERGENCY ALERT -->
+
+    <section class="emergency-alert">
+
+
+        <div class="emergency-animation">
+
+            <div class="emergency-ring"></div>
+
+            <div class="emergency-icon">
+                🚨
+            </div>
+
+        </div>
+
+
+        <div class="emergency-content">
+
+            <div class="emergency-label">
+
+                <span>
+                    HIGH PRIORITY
+                </span>
+
+                <small>
+                    GENERATED 8 MIN AGO
+                </small>
+
+            </div>
+
+
+            <h2>
+                Heavy Rainfall Expected
+            </h2>
+
+
+            <p>
+                AI weather analysis predicts heavy
+                rainfall within the next 6 hours.
+                Immediate precautionary action is recommended.
+            </p>
+
+
+            <div class="emergency-details">
+
+                <div>
+                    <span>📍</span>
+                    <strong>Chegunta</strong>
+                </div>
+
+                <div>
+                    <span>⏱️</span>
+                    <strong>Within 6 Hours</strong>
+                </div>
+
+                <div>
+                    <span>🤖</span>
+                    <strong>78% Confidence</strong>
+                </div>
+
+            </div>
+
+
+            <button
+                class="alert-action"
+                onclick="showDemoAlert()">
+
+                🚨 View Emergency Instructions
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- OTHER ALERTS -->
+
+    <section class="alert-grid">
+
+
+        <div class="alert-item medium-alert">
+
+            <div class="alert-item-icon">
+                🌊
+            </div>
+
+            <div>
+
+                <span>
+                    MEDIUM RISK
+                </span>
+
+                <h3>
+                    Flood Risk
+                </h3>
+
+                <p>
+                    Low-lying areas may experience
+                    water accumulation.
+                </p>
+
+                <small>
+                    AI Confidence: 54%
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="alert-item low-alert">
+
+            <div class="alert-item-icon">
+                💨
+            </div>
+
+            <div>
+
+                <span>
+                    LOW RISK
+                </span>
+
+                <h3>
+                    Strong Wind
+                </h3>
+
+                <p>
+                    Moderate wind conditions
+                    expected later today.
+                </p>
+
+                <small>
+                    AI Confidence: 31%
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ALERT HISTORY -->
+
+    <section class="dashboard-panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <span class="card-label">
+                    ALERT HISTORY
+                </span>
+
+                <h2>
+                    Recent Warnings
+                </h2>
+
+            </div>
+
+            <span class="status-green">
+                SYSTEM ACTIVE
+            </span>
+
+        </div>
+
+
+        <div class="alert-history">
+
+
+            <div class="history-item">
+
+                <div class="history-time">
+                    15 Sep
+                </div>
+
+                <div class="history-line">
+                    <span></span>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Heavy Rain
+                    </strong>
+
+                    <small>
+                        High Risk • 78% confidence
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="history-item">
+
+                <div class="history-time">
+                    13 Sep
+                </div>
+
+                <div class="history-line">
+                    <span></span>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Strong Wind
+                    </strong>
+
+                    <small>
+                        Medium Risk • 61% confidence
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="history-item">
+
+                <div class="history-time">
+                    10 Sep
+                </div>
+
+                <div class="history-line">
+                    <span></span>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Heatwave
+                    </strong>
+
+                    <small>
+                        High Risk • 74% confidence
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="history-item">
+
+                <div class="history-time">
+                    06 Sep
+                </div>
+
+                <div class="history-line">
+                    <span></span>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Heavy Rain
+                    </strong>
+
+                    <small>
+                        Medium Risk • 56% confidence
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="page-navigation">
+
+        <button
+            class="secondary-button"
+            onclick="goTo('ai-prediction.html')">
+
+            ← AI Prediction
+
+        </button>
+
+        <button
+            class="primary-button"
+            onclick="goTo('forecast.html')">
+
+            View Forecast →
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
