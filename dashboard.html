@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Panchayat Weather AI</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="app-page">
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <div class="logo-icon">
+            🌦️
+        </div>
+
+        <div>
+            <h2>Panchayat</h2>
+            <span>Weather AI</span>
+        </div>
+
+    </div>
+
+
+    <div class="location-mini">
+
+        <span>📍</span>
+
+        <div>
+            <small>ACTIVE LOCATION</small>
+            <strong>Chegunta</strong>
+        </div>
+
+        <span class="online-dot"></span>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">
+            OVERVIEW
+        </p>
+
+        <a href="dashboard.html"
+           class="nav-link active">
+
+            <span>📊</span>
+            Dashboard
+
+        </a>
+
+
+        <p class="nav-title">
+            INTELLIGENCE
+        </p>
+
+        <a href="weather.html"
+           class="nav-link">
+
+            <span>🌦️</span>
+            Live Weather
+
+        </a>
+
+
+        <a href="ai-prediction.html"
+           class="nav-link">
+
+            <span>🤖</span>
+            AI Prediction
+
+            <span class="nav-badge">
+                AI
+            </span>
+
+        </a>
+
+
+        <a href="alerts.html"
+           class="nav-link">
+
+            <span>🚨</span>
+            Smart Alerts
+
+            <span class="notification-count">
+                3
+            </span>
+
+        </a>
+
+
+        <a href="forecast.html"
+           class="nav-link">
+
+            <span>📅</span>
+            7-Day Forecast
+
+        </a>
+
+
+        <p class="nav-title">
+            ACTION
+        </p>
+
+
+        <a href="recommendations.html"
+           class="nav-link">
+
+            <span>🌾</span>
+            Farmer Actions
+
+        </a>
+
+
+        <a href="panchayat.html"
+           class="nav-link">
+
+            <span>📍</span>
+            Panchayat Center
+
+        </a>
+
+
+        <p class="nav-title">
+            ANALYTICS
+        </p>
+
+
+        <a href="reports.html"
+           class="nav-link">
+
+            <span>📈</span>
+            Reports
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="system-status">
+
+            <span class="status-pulse"></span>
+
+            <div>
+                <strong>System Online</strong>
+                <small>AI monitoring active</small>
+            </div>
+
+        </div>
+
+
+        <button
+            class="back-button"
+            onclick="goTo('index.html')">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MOBILE HEADER
+===================================================== -->
+
+<header class="mobile-header">
+
+    <div class="mobile-logo">
+
+        🌦️
+
+        <strong>
+            Panchayat Weather AI
+        </strong>
+
+    </div>
+
+
+    <button
+        class="menu-button"
+        onclick="toggleMobileMenu()">
+
+        ☰
+
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="dashboard-main">
+
+
+    <!-- TOP HEADER -->
+
+    <section class="dashboard-topbar">
+
+        <div>
+
+            <span class="page-label">
+                PANCHAYAT CONTROL CENTER
+            </span>
+
+            <h1>
+                Good Morning,
+                <span>Chegunta 👋</span>
+            </h1>
+
+            <p>
+                Here's your weather intelligence
+                overview for today.
+            </p>
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <div class="live-clock">
+
+                <span class="clock-dot"></span>
+
+                <div>
+
+                    <small>LIVE MONITORING</small>
+
+                    <strong id="currentTime">
+                        --:--:--
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="notification-button"
+                onclick="goTo('alerts.html')">
+
+                🔔
+
+                <span>3</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         HERO WEATHER + ALERT
+    ================================================= -->
+
+    <section class="dashboard-hero-grid">
+
+
+        <!-- CURRENT WEATHER -->
+
+        <div class="dashboard-weather-card">
+
+
+            <div class="weather-card-header">
+
+                <div>
+
+                    <span class="card-label">
+                        CURRENT CONDITIONS
+                    </span>
+
+                    <h2>
+                        Chegunta Panchayat
+                    </h2>
+
+                </div>
+
+
+                <span class="live-badge">
+                    ● LIVE
+                </span>
+
+            </div>
+
+
+
+            <div class="weather-main">
+
+                <div class="weather-temperature">
+
+                    <strong>
+                        31°
+                    </strong>
+
+                    <span>
+                        C
+                    </span>
+
+                </div>
+
+
+                <div class="weather-symbol">
+
+                    ⛅
+
+                </div>
+
+
+                <div class="weather-condition">
+
+                    <strong>
+                        Partly Cloudy
+                    </strong>
+
+                    <span>
+                        Feels like 33°C
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="weather-stats-row">
+
+
+                <div class="weather-stat">
+
+                    <span>💧</span>
+
+                    <div>
+                        <strong>68%</strong>
+                        <small>Humidity</small>
+                    </div>
+
+                </div>
+
+
+                <div class="weather-stat">
+
+                    <span>🌧️</span>
+
+                    <div>
+                        <strong>12 mm</strong>
+                        <small>Rainfall</small>
+                    </div>
+
+                </div>
+
+
+                <div class="weather-stat">
+
+                    <span>💨</span>
+
+                    <div>
+                        <strong>14 km/h</strong>
+                        <small>Wind</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="card-link"
+                onclick="goTo('weather.html')">
+
+                View Detailed Weather
+                →
+
+            </button>
+
+        </div>
+
+
+
+        <!-- MAIN ALERT -->
+
+        <div class="dashboard-alert-card">
+
+
+            <div class="alert-glow"></div>
+
+
+            <div class="alert-card-header">
+
+                <span class="danger-icon">
+                    🚨
+                </span>
+
+                <span class="priority-tag">
+                    HIGH PRIORITY
+                </span>
+
+            </div>
+
+
+            <div class="alert-content">
+
+                <span class="alert-small">
+                    WEATHER WARNING
+                </span>
+
+                <h2>
+                    Heavy Rainfall Expected
+                </h2>
+
+                <p>
+                    AI predicts heavy rainfall
+                    within the next
+                    <strong>6 hours</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="alert-progress">
+
+                <div class="progress-label">
+
+                    <span>
+                        AI Confidence
+                    </span>
+
+                    <strong>
+                        78%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-fill danger-fill"
+                        data-value="78">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="alert-action"
+                onclick="showDemoAlert()">
+
+                🚨 View Emergency Alert
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         STATISTICS
+    ================================================= -->
+
+    <section class="stats-grid">
+
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon blue">
+                🌦️
+            </div>
+
+            <div>
+
+                <span>
+                    Weather Status
+                </span>
+
+                <strong>
+                    Stable
+                </strong>
+
+                <small>
+                    Updated 2 min ago
+                </small>
+
+            </div>
+
+            <div class="stat-arrow">
+                →
+            </div>
+
+        </div>
+
+
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon purple">
+                🤖
+            </div>
+
+            <div>
+
+                <span>
+                    AI Risk Score
+                </span>
+
+                <strong>
+                    78%
+                </strong>
+
+                <small>
+                    High rainfall risk
+                </small>
+
+            </div>
+
+            <div class="stat-arrow">
+                →
+            </div>
+
+        </div>
+
+
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon red">
+                🚨
+            </div>
+
+            <div>
+
+                <span>
+                    Active Alerts
+                </span>
+
+                <strong>
+                    03
+                </strong>
+
+                <small>
+                    1 high priority
+                </small>
+
+            </div>
+
+            <div class="stat-arrow">
+                →
+            </div>
+
+        </div>
+
+
+
+        <div class="dashboard-stat-card">
+
+            <div class="stat-icon green">
+                👨‍🌾
+            </div>
+
+            <div>
+
+                <span>
+                    Farmers to Notify
+                </span>
+
+                <strong>
+                    248
+                </strong>
+
+                <small>
+                    Ready for notification
+                </small>
+
+            </div>
+
+            <div class="stat-arrow">
+                →
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         AI RISK + QUICK ACTIONS
+    ================================================= -->
+
+    <section class="dashboard-two-column">
+
+
+        <!-- AI RISK -->
+
+        <div class="dashboard-panel ai-risk-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="card-label">
+                        ARTIFICIAL INTELLIGENCE
+                    </span>
+
+                    <h2>
+                        AI Risk Analysis
+                    </h2>
+
+                </div>
+
+                <span class="ai-status">
+                    ● MODEL ACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="risk-list">
+
+
+                <div class="risk-row">
+
+                    <div class="risk-info">
+
+                        <span class="risk-icon">
+                            🌧️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Heavy Rain
+                            </strong>
+
+                            <small>
+                                Next 6 hours
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="risk-meter">
+
+                        <div class="meter-track">
+
+                            <div
+                                class="meter-fill high"
+                                style="width:78%">
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            78%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="risk-row">
+
+                    <div class="risk-info">
+
+                        <span class="risk-icon">
+                            🌊
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Flood Risk
+                            </strong>
+
+                            <small>
+                                Low-lying areas
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="risk-meter">
+
+                        <div class="meter-track">
+
+                            <div
+                                class="meter-fill medium"
+                                style="width:54%">
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            54%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="risk-row">
+
+                    <div class="risk-info">
+
+                        <span class="risk-icon">
+                            🌾
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Crop Damage
+                            </strong>
+
+                            <small>
+                                Agricultural risk
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="risk-meter">
+
+                        <div class="meter-track">
+
+                            <div
+                                class="meter-fill high"
+                                style="width:72%">
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            72%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="risk-row">
+
+                    <div class="risk-info">
+
+                        <span class="risk-icon">
+                            ☀️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Heatwave
+                            </strong>
+
+                            <small>
+                                Next 48 hours
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="risk-meter">
+
+                        <div class="meter-track">
+
+                            <div
+                                class="meter-fill low"
+                                style="width:18%">
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            18%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="panel-link"
+                onclick="goTo('ai-prediction.html')">
+
+                Open Full AI Analysis →
+
+            </button>
+
+        </div>
+
+
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="dashboard-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="card-label">
+                        PANCHAYAT RESPONSE
+                    </span>
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+
+                <button
+                    class="quick-action"
+                    onclick="notifyFarmers()">
+
+                    <span class="quick-icon">
+                        📢
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Notify Farmers
+                        </strong>
+
+                        <small>
+                            Send emergency alert
+                        </small>
+
+                    </div>
+
+                    <span>→</span>
+
+                </button>
+
+
+
+                <button
+                    class="quick-action"
+                    onclick="goTo('panchayat.html')">
+
+                    <span class="quick-icon">
+                        📍
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Check GPS Areas
+                        </strong>
+
+                        <small>
+                            View affected locations
+                        </small>
+
+                    </div>
+
+                    <span>→</span>
+
+                </button>
+
+
+
+                <button
+                    class="quick-action"
+                    onclick="showRecommendation()">
+
+                    <span class="quick-icon">
+                        🌾
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Farmer Actions
+                        </strong>
+
+                        <small>
+                            View recommendations
+                        </small>
+
+                    </div>
+
+                    <span>→</span>
+
+                </button>
+
+
+
+                <button
+                    class="quick-action"
+                    onclick="generateReport()">
+
+                    <span class="quick-icon">
+                        📊
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Generate Report
+                        </strong>
+
+                        <small>
+                            Weather & alert report
+                        </small>
+
+                    </div>
+
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FORECAST
+    ================================================= -->
+
+    <section class="dashboard-panel forecast-panel">
+
+
+        <div class="panel-heading">
+
+            <div>
+
+                <span class="card-label">
+                    WEATHER OUTLOOK
+                </span>
+
+                <h2>
+                    7-Day Forecast
+                </h2>
+
+            </div>
+
+
+            <button
+                class="text-button"
+                onclick="goTo('forecast.html')">
+
+                View Full Forecast →
+
+            </button>
+
+        </div>
+
+
+
+        <div class="forecast-row">
+
+
+            <div class="forecast-day active">
+
+                <span>
+                    TODAY
+                </span>
+
+                <div class="forecast-icon">
+                    ⛅
+                </div>
+
+                <strong>
+                    31°
+                </strong>
+
+                <small>
+                    Rain 60%
+                </small>
+
+            </div>
+
+
+
+            <div class="forecast-day">
+
+                <span>
+                    TOMORROW
+                </span>
+
+                <div class="forecast-icon">
+                    🌧️
+                </div>
+
+                <strong>
+                    30°
+                </strong>
+
+                <small>
+                    Rain 78%
+                </small>
+
+            </div>
+
+
+
+            <div class="forecast-day risk-day">
+
+                <span>
+                    WED
+                </span>
+
+                <div class="forecast-icon">
+                    🌧️
+                </div>
+
+                <strong>
+                    29°
+                </strong>
+
+                <small>
+                    Rain 85%
+                </small>
+
+            </div>
+
+
+
+            <div class="forecast-day">
+
+                <span>
+                    THU
+                </span>
+
+                <div class="forecast-icon">
+                    ☁️
+                </div>
+
+                <strong>
+                    30°
+                </strong>
+
+                <small>
+                    Rain 65%
+                </small>
+
+            </div>
+
+
+
+            <div class="forecast-day">
+
+                <span>
+                    FRI
+                </span>
+
+                <div class="forecast-icon">
+                    ⛅
+                </div>
+
+                <strong>
+                    32°
+                </strong>
+
+                <small>
+                    Rain 40%
+                </small>
+
+            </div>
+
+
+
+            <div class="forecast-day">
+
+                <span>
+                    SAT
+                </span>
+
+                <div class="forecast-icon">
+                    ☀️
+                </div>
+
+                <strong>
+                    33°
+                </strong>
+
+                <small>
+                    Rain 20%
+                </small>
+
+            </div>
+
+
+
+            <div class="forecast-day">
+
+                <span>
+                    SUN
+                </span>
+
+                <div class="forecast-icon">
+                    ☁️
+                </div>
+
+                <strong>
+                    31°
+                </strong>
+
+                <small>
+                    Rain 45%
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PANCHAYAT STATUS
+    ================================================= -->
+
+    <section class="dashboard-bottom-grid">
+
+
+        <div class="dashboard-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="card-label">
+                        PANCHAYAT MONITORING
+                    </span>
+
+                    <h2>
+                        Response Status
+                    </h2>
+
+                </div>
+
+                <span class="status-green">
+                    ● ACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="response-items">
+
+                <div>
+
+                    <span>
+                        🏘️ Affected Areas
+                    </span>
+
+                    <strong>
+                        2
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        👨‍🌾 Farmers Reached
+                    </span>
+
+                    <strong>
+                        1,248
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        🚨 Alerts Today
+                    </span>
+
+                    <strong>
+                        3
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="panel-link"
+                onclick="goTo('panchayat.html')">
+
+                Open Panchayat Center →
+
+            </button>
+
+        </div>
+
+
+
+        <div class="dashboard-panel recommendation-preview">
+
+            <div class="recommendation-icon">
+                🌾
+            </div>
+
+            <div>
+
+                <span class="card-label">
+                    AI RECOMMENDATION
+                </span>
+
+                <h2>
+                    Protect Harvested Crops
+                </h2>
+
+                <p>
+                    Heavy rainfall is expected.
+                    Move harvested crops to
+                    covered storage immediately.
+                </p>
+
+                <button
+                    class="panel-link"
+                    onclick="goTo('recommendations.html')">
+
+                    View All Recommendations →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
