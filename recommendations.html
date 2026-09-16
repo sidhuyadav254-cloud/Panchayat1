@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Farmer Recommendations | Panchayat Weather AI</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="app-page recommendation-page">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <div class="logo-icon">
+            🌦️
+        </div>
+
+        <div>
+            <h2>Panchayat</h2>
+            <span>Weather AI</span>
+        </div>
+
+    </div>
+
+
+    <div class="location-mini">
+
+        <span>📍</span>
+
+        <div>
+            <small>ACTIVE LOCATION</small>
+            <strong>Chegunta</strong>
+        </div>
+
+        <span class="online-dot"></span>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">OVERVIEW</p>
+
+        <a href="dashboard.html" class="nav-link">
+            <span>📊</span> Dashboard
+        </a>
+
+
+        <p class="nav-title">INTELLIGENCE</p>
+
+        <a href="weather.html" class="nav-link">
+            <span>🌦️</span> Live Weather
+        </a>
+
+        <a href="ai-prediction.html" class="nav-link">
+            <span>🤖</span> AI Prediction
+        </a>
+
+        <a href="alerts.html" class="nav-link">
+            <span>🚨</span> Smart Alerts
+            <span class="notification-count">3</span>
+        </a>
+
+        <a href="forecast.html" class="nav-link">
+            <span>📅</span> 7-Day Forecast
+        </a>
+
+
+        <p class="nav-title">ACTION</p>
+
+        <a href="recommendations.html"
+           class="nav-link active">
+
+            <span>🌾</span>
+            Farmer Actions
+
+        </a>
+
+        <a href="panchayat.html"
+           class="nav-link">
+
+            <span>📍</span>
+            Panchayat Center
+
+        </a>
+
+
+        <p class="nav-title">ANALYTICS</p>
+
+        <a href="reports.html"
+           class="nav-link">
+
+            <span>📈</span>
+            Reports
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="system-status">
+
+            <span class="status-pulse"></span>
+
+            <div>
+                <strong>AI Recommendations Active</strong>
+                <small>Action engine running</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- MOBILE HEADER -->
+
+<header class="mobile-header">
+
+    <div class="mobile-logo">
+
+        🌾
+
+        <strong>
+            Farmer Actions
+        </strong>
+
+    </div>
+
+
+    <button
+        class="menu-button"
+        onclick="toggleMobileMenu()">
+
+        ☰
+
+    </button>
+
+</header>
+
+
+
+<!-- MAIN -->
+
+<main class="dashboard-main">
+
+
+    <!-- HEADER -->
+
+    <section class="feature-page-header">
+
+        <div>
+
+            <span class="page-label">
+                AI → FARMER ACTION
+            </span>
+
+            <h1>
+                Smart
+                <span>Recommendations</span>
+            </h1>
+
+            <p>
+                Simple actions generated from weather
+                and AI risk predictions.
+            </p>
+
+        </div>
+
+
+        <div class="recommendation-status">
+            🌾 4 ACTIONS REQUIRED
+        </div>
+
+    </section>
+
+
+
+    <!-- PRIORITY BANNER -->
+
+    <section class="recommendation-banner">
+
+        <div class="recommendation-banner-icon">
+            🚨
+        </div>
+
+
+        <div>
+
+            <span>
+                HIGH PRIORITY
+            </span>
+
+            <h2>
+                Protect Your Harvest
+            </h2>
+
+            <p>
+                Heavy rainfall is expected within
+                the next 6 hours. Take protective
+                action immediately.
+            </p>
+
+        </div>
+
+
+        <button
+            class="primary-button"
+            onclick="protectHarvest()">
+
+            Protect Harvest
+
+        </button>
+
+    </section>
+
+
+
+    <!-- ACTION CARDS -->
+
+    <section class="recommendation-grid">
+
+
+        <!-- HARVEST -->
+
+        <div class="action-card urgent">
+
+            <div class="action-card-top">
+
+                <div class="action-icon">
+                    🌾
+                </div>
+
+                <span>
+                    URGENT
+                </span>
+
+            </div>
+
+
+            <h3>
+                Protect Harvest
+            </h3>
+
+            <p>
+                Move harvested crops to a covered
+                and dry storage area.
+            </p>
+
+
+            <div class="action-list">
+
+                <div>✓ Use waterproof sheets</div>
+
+                <div>✓ Keep crops above ground</div>
+
+                <div>✓ Check storage roof</div>
+
+            </div>
+
+
+            <button
+                onclick="protectHarvest()">
+
+                View Action →
+
+            </button>
+
+        </div>
+
+
+
+        <!-- SPRAYING -->
+
+        <div class="action-card warning">
+
+            <div class="action-card-top">
+
+                <div class="action-icon">
+                    🧪
+                </div>
+
+                <span>
+                    AVOID
+                </span>
+
+            </div>
+
+
+            <h3>
+                Avoid Spraying
+            </h3>
+
+            <p>
+                Rainfall may wash away pesticides
+                and fertilizers.
+            </p>
+
+
+            <div class="action-list">
+
+                <div>✓ Avoid pesticide spraying</div>
+
+                <div>✓ Avoid foliar fertilizers</div>
+
+                <div>✓ Wait for dry weather</div>
+
+            </div>
+
+
+            <button
+                onclick="sprayingWarning()">
+
+                Why Avoid? →
+
+            </button>
+
+        </div>
+
+
+
+        <!-- DRAINAGE -->
+
+        <div class="action-card water">
+
+            <div class="action-card-top">
+
+                <div class="action-icon">
+                    💧
+                </div>
+
+                <span>
+                    PREPARE
+                </span>
+
+            </div>
+
+
+            <h3>
+                Check Drainage
+            </h3>
+
+            <p>
+                Clear blocked drainage channels
+                before heavy rainfall.
+            </p>
+
+
+            <div class="action-list">
+
+                <div>✓ Check water channels</div>
+
+                <div>✓ Remove blockages</div>
+
+                <div>✓ Monitor low areas</div>
+
+            </div>
+
+
+            <button
+                onclick="drainageCheck()">
+
+                Check Now →
+
+            </button>
+
+        </div>
+
+
+
+        <!-- EQUIPMENT -->
+
+        <div class="action-card safe">
+
+            <div class="action-card-top">
+
+                <div class="action-icon">
+                    🚜
+                </div>
+
+                <span>
+                    PRECAUTION
+                </span>
+
+            </div>
+
+
+            <h3>
+                Protect Equipment
+            </h3>
+
+            <p>
+                Move agricultural equipment away
+                from exposed and low-lying areas.
+            </p>
+
+
+            <div class="action-list">
+
+                <div>✓ Move tractors indoors</div>
+
+                <div>✓ Protect electrical equipment</div>
+
+                <div>✓ Secure farm tools</div>
+
+            </div>
+
+
+            <button
+                onclick="showNotification(
+                    'Equipment protection reminder activated'
+                )">
+
+                Mark Reminder →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- DAILY PLAN -->
+
+    <section class="dashboard-panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <span class="card-label">
+                    TODAY'S FARM PLAN
+                </span>
+
+                <h2>
+                    Recommended Schedule
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="farm-plan">
+
+
+            <div class="plan-item completed">
+
+                <div class="plan-time">
+                    08:00
+                </div>
+
+                <div class="plan-dot">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        Weather Check
+                    </strong>
+
+                    <small>
+                        Review Panchayat weather alert
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="plan-item active-plan">
+
+                <div class="plan-time">
+                    10:00
+                </div>
+
+                <div class="plan-dot">
+                    !
+                </div>
+
+                <div>
+
+                    <strong>
+                        Protect Harvest
+                    </strong>
+
+                    <small>
+                        Move harvested crops to storage
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="plan-item">
+
+                <div class="plan-time">
+                    13:00
+                </div>
+
+                <div class="plan-dot">
+                    3
+                </div>
+
+                <div>
+
+                    <strong>
+                        Check Drainage
+                    </strong>
+
+                    <small>
+                        Inspect farm water channels
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="plan-item">
+
+                <div class="plan-time">
+                    17:00
+                </div>
+
+                <div class="plan-dot">
+                    4
+                </div>
+
+                <div>
+
+                    <strong>
+                        Evening Weather Check
+                    </strong>
+
+                    <small>
+                        Review updated AI prediction
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="page-navigation">
+
+        <button
+            class="secondary-button"
+            onclick="goTo('forecast.html')">
+
+            ← Forecast
+
+        </button>
+
+
+        <button
+            class="primary-button"
+            onclick="goTo('panchayat.html')">
+
+            Open Panchayat Center →
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
